@@ -84,10 +84,31 @@
             align-items: center; justify-content: space-around;
         }
         .myCard{
-            width: 20%; height: 50%;
+            width: 20%; height: 60%;
             opacity: 0.7; background-color: white;
         }
-
+        .cardText{
+            padding: 10px;
+        }
+        .cardText h4{
+            margin:0;
+        }
+        .cardText p{
+            height: 100px;
+            margin-top:5px;
+            overflow: hidden;
+        }
+        .cardText a{
+            text-decoration: none;
+            background-color: green;
+            color:white; margin-top:5px;
+            padding-left: 10px; padding-right:10px ;
+            padding-top:5px;padding-bottom: 5px;
+            border-radius: 5px;
+        }
+        .cardImage{
+            height: 40%;
+        }
         footer {
             background-color: navy;
             opacity: 0.4;
@@ -126,25 +147,29 @@
         <div id="myCardsSlider">
             <div class="myCard">
                 <img class="" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
-                <div class="">
+                <div class="cardText">
+                    <h4>Seekh Kebab</h4>
+                    <p>Original taste of bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                        bla bla</p>
+                        <span class="currency">Just Rs $5</span>
+                    <a href="" class="btnPrimary">Order Now</a>
+                </div>
+            </div>
+            <div class="myCard">
+                <img class="cardImage" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
+                <div class="cardText">
                     <h4>Seekh Kebab</h4>
                     <p>Original taste of bla bla bla $<span class="currency"></span></p>
+                    <span class="currency">Just Rs $5</span>
                     <a href="" class="btnPrimary">Order Now</a>
                 </div>
             </div>
             <div class="myCard">
                 <img class="" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
-                <div class="">
+                <div class="cardText">
                     <h4>Seekh Kebab</h4>
-                    <p>Original taste of bla bla bla $<span class="currency"></span></p>
-                    <a href="" class="btnPrimary">Order Now</a>
-                </div>
-            </div>
-            <div class="myCard">
-                <img class="" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
-                <div class="">
-                    <h4>Seekh Kebab</h4>
-                    <p>Original taste of bla bla bla $<span class="currency"></span></p>
+                    <p>Original taste of bla bla bla </p>
+                    <span class="currency">Just Rs $5</span>
                     <a href="" class="btnPrimary">Order Now</a>
                 </div>
             </div>
