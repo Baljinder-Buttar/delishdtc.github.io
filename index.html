@@ -1,0 +1,177 @@
+<!-- <%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %> -->
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Delish Kebabs Fish n Chips - Delicious Kebab - Delicious Fish </title>
+    <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    
+    <link href="style/commonStyles.css" rel="stylesheet" />
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            background-image: url('images/background.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            font-size: 20px;
+        }
+
+        header {
+            background-color: navy;
+            opacity: 0.4;
+            display: flex;
+            height: 8%;
+            align-items: center;
+        }
+        .logoText {
+            padding-left: 50px;
+            color: white;
+            width: 40%;
+            font-weight: bolder;
+            font-size: 150%;
+            animation: example 5s linear 1.5s infinite;
+        }
+
+        @keyframes example {
+            0% {
+                color: white
+            }
+
+            50% {
+                color: navy;
+            }
+
+            100% {
+                color: white;
+            }
+        }
+        .nav {
+            display: flex;
+            width: 60%;
+            justify-content: flex-end;
+            margin-right: 50px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 100%;
+        }
+
+        .nav a:hover {
+            color: orangered;
+        }
+
+        .nav li {
+            display: inline;
+        }
+
+        .nav ul {
+            word-spacing: 20px;
+        }
+
+        section {
+            height: 82%; display:flex;
+            align-items: center;
+        }
+        #myCardsSlider{
+            display: flex; width: 100%;
+            
+            align-items: center; justify-content: space-around;
+        }
+        .myCard{
+            width: 20%; height: 50%;
+            opacity: 0.7; background-color: white;
+        }
+
+        footer {
+            background-color: navy;
+            opacity: 0.4;
+            display: flex;
+            height: 10%;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .copyright {
+            font-size: 70%; color: white;
+        }
+        
+        .socialMedia {
+            color: white;
+            font-size: 150%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form id="form1" runat="server"> -->
+    <header>
+        <div class="logoText">Delicious Kebabs & Fish</div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+            <div>
+    </header>
+    <section>
+        <div id="myCardsSlider">
+            <div class="myCard">
+                <img class="" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
+                <div class="">
+                    <h4>Seekh Kebab</h4>
+                    <p>Original taste of bla bla bla $<span class="currency"></span></p>
+                    <a href="" class="btnPrimary">Order Now</a>
+                </div>
+            </div>
+            <div class="myCard">
+                <img class="" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
+                <div class="">
+                    <h4>Seekh Kebab</h4>
+                    <p>Original taste of bla bla bla $<span class="currency"></span></p>
+                    <a href="" class="btnPrimary">Order Now</a>
+                </div>
+            </div>
+            <div class="myCard">
+                <img class="" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
+                <div class="">
+                    <h4>Seekh Kebab</h4>
+                    <p>Original taste of bla bla bla $<span class="currency"></span></p>
+                    <a href="" class="btnPrimary">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class="card" style="width:300px">
+                <img class="card-img-top" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Seekh Kebab</h4>
+                    <p class="card-text">Original taste of bla bla bla lba <span style='color:lightseagreen'>$5</span></p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+            
+        </div> -->
+    </section>
+    <footer>
+        <div class="copyright">(c) Copyrights reserved 2020-21.</div>
+        <div style="word-spacing: 20px;">
+            <a href=""><i class="fa fa-facebook socialMedia"></i></a>
+            <a href=""><i class="fa fa-twitter socialMedia"></i></a>
+            <a href=""><i class="fa fa-instagram socialMedia"></i></a>
+            <a href=""><i class="fa fa-linkedin socialMedia"></i></a>
+        </div>
+    </footer>
+    <!-- <div><img id="logoImg" src="images/logo.png" alt="Logo image" class="logo" /></div> -->
+    <!-- </form> -->
+</body>
+
+</html>
