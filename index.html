@@ -24,7 +24,6 @@
             align-items: center;
         }
         .logoText {
-            padding-left: 50px;
             color: white;
             width: 40%;
             font-weight: bolder;
@@ -79,13 +78,12 @@
 
         section {
             display:flex; width:100%;
-            align-items: center; height:82%;
-            position: relative;
+            align-items: center; height:76%;   
         }
         #myCardsSlider{
             display: flex; width: 100%; margin:10px;
             align-items: center; justify-content: space-around;
-            flex-direction: row;
+            flex-direction: row; height: 100%;
         }
         .myCard{
             width: 25%; height: 60%;
@@ -115,10 +113,25 @@
             height: 40%; 
             border-radius: 10px; width: 100%;
         }
+        .fullCousine{
+            width: 100%;
+            text-align: right;
+            height: 8%;
+        }
+        .fullCousine a{
+            text-decoration: none;
+            color:white;
+            background-color: darkred;
+            padding: 8px;
+            font-size: 100%;
+            border-radius: 10px;
+            margin-right:50px;
+            margin-top:5px;
+        }
         footer {
             background-color: darkred;
             display: flex;
-            height: 50px;
+            height: 8%;
             align-items: center;
             justify-content: space-around;
         }
@@ -130,9 +143,19 @@
             font-size: 150%;
 
         }
-        @media (max-width: 1000px){
+        @media (max-width: 1024px){
+            header{height: 16%;flex-direction: column;}
             .logoText{width: 100%;}
-            .nav{display: inline;}
+            .nav{width:100%;text-align: center;}
+            section{height: 68%;}
+            
+        }
+        @media (max-width: 890px){
+            header{height: 16%;flex-direction: column;}
+            .logoText{width: 100%;}
+            .nav{width:100%;text-align: center;}
+            section{height: 68%;}
+            
         }
     </style>
 </head>
@@ -182,6 +205,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- <div class="container">
             <div class="card" style="width:300px">
                 <img class="card-img-top" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
@@ -194,6 +218,7 @@
             
         </div> -->
     </section>
+    <div class="fullCousine"><a href="">View Full Cousine <i class="fa fa-arrow-right"></i></a></div>
     <footer>
         <div class="copyright">(c) Copyrights reserved 2020-21.</div>
         <div style="word-spacing: 20px;">
