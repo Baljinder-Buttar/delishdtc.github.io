@@ -78,7 +78,7 @@
 
         section {
             display:flex; width:100%;
-            align-items: center; height:76%;   
+            align-items: center; height:76%;  flex-direction: column; 
         }
         #myCardsSlider{
             display: flex; width: 100%; margin:10px;
@@ -155,12 +155,13 @@
             .myCard{height:85%;} 
             .cardText p{height: 100px;}           
         }
-        @media (max-width: 410px){
+        @media (max-width: 370px){
             header{height: 8%;justify-content: space-around;}
-            
+            .myCard{width:100%;margin:5px;}
             .nav{display:none;}
-            section{height: 68%;flex-direction: column;}
-              
+            section{height: 68%;}
+            body{height: 100%;}
+            #myCardsSlider{flex-direction: column;}
         }
         
     </style>
