@@ -9,7 +9,6 @@
     <title>Delish Kebabs Fish n Chips - Delicious Kebab - Delicious Fish </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    
     <link href="style/commonStyles.css" rel="stylesheet" />
     <style>
         body {
@@ -17,37 +16,19 @@
             width: 100%;
             font-size: 20px;
         }
+        :root {
+            --main-bg-color: rgb(196, 4, 4);
+        }
 
         header {
-            background-color: darkred;
+            background-color: var(--main-bg-color);
             display: flex;
             height: 8%;
             align-items: center;
         }
-        .logoText {
-            color: white;
-            width: 40%;
-            font-weight: bolder;
-            font-size: 150%;
-            animation: example 5s linear 1.5s infinite;
-            text-align: center;
-        }
-
-        @keyframes example {
-            0% {
-                color: white
-            }
-
-            50% {
-                color: darkred;
-            }
-
-            100% {
-                color: white;
-            }
-        }
+        
+        
         .nav {
-            width: 60%;
             text-align: right;
             margin-right: 50px;
             font-weight: bold;
@@ -56,12 +37,12 @@
         .nav li a {
             text-decoration: none;
             color: white;
-            font-size: 100%;
+            font-size: 150%;
             padding:5px;
         }
 
         .nav li a:hover {
-            color: darkred;
+            color:var(--main-bg-color);
             background-color: white;
             border-radius: 5px; padding:5px;
 
@@ -81,15 +62,30 @@
             display:flex; width:100%;
             align-items: center; height:76%;  flex-direction: column; 
         }
+        .col1{
+            text-align:top; border:1px solid black;
+        }
+        .logo img{
+            border-radius: 10px;
+            opacity:0.9;
+        }
         #myCardsSlider{
             display: flex; width: 100%; margin:10px;
             align-items: center; justify-content: space-around;
             flex-direction: row; height: 100%;
         }
+        .callOrder{
+            padding : 10px;
+            color:var(--main-bg-color);
+            font-size: 180%;
+            margin-top:10px;
+            text-align: center;
+            opacity: 1;
+        }
         .myCard{
             width: 25%; height: 70%;
             background-color: white; box-sizing: border-box;
-            border-radius: 10px; border:1px solid darkred;
+            border-radius: 10px; border:1px solid var(--main-bg-color);
         }
         .cardText{
             padding: 10px;
@@ -104,7 +100,7 @@
         }
         .cardText a{
             text-decoration: none;
-            background-color: darkred;
+            background-color: var(--main-bg-color);
             color:white; margin-top:5px;
             padding-left: 10px; padding-right:10px ;
             padding-top:5px;padding-bottom: 5px;
@@ -122,7 +118,7 @@
         .fullCousine a{
             text-decoration: none;
             color:white;
-            background-color: darkred;
+            background-color: var(--main-bg-color);
             padding: 8px;
             font-size: 100%;
             border-radius: 10px;
@@ -130,7 +126,7 @@
             margin-top:5px;
         }
         footer {
-            background-color: darkred;
+            background-color: var(--main-bg-color);
             display: flex;
             height: 8%;
             align-items: center;
@@ -171,7 +167,6 @@
 <body>
     <!-- <form id="form1" runat="server"> -->
     <header>
-        <div class="logoText">Delicious Kebabs & Fish</div>
         <div class="nav">
             <ul>
                 <li><a href="#">Menu</a></li>
@@ -184,16 +179,12 @@
     </header>
     <section>
         <div id="myCardsSlider">
-            <div class="myCard">
-                <img class="cardImage" src="productImages/kebabs.jpg" alt="Card image" >
-                <div class="cardText">
-                    <h4>Seekh Kebab</h4>
-                    <p>Original taste of bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                        bla bla</p>
-                        <span class="currency">Just Rs $5</span>
-                    <a href="" >Order Now</a>
-                </div>
+            <div class="col1">
+                <div class="logo"><img src="images/logo.png" alt="" /></div>
+                <div class="callOrder"><i class="fa fa-phone" aria-hidden="true"></i> 0409-717-693</div>
+                <div class="callOrder"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
             </div>
+            
             <div class="myCard">
                 <img class="cardImage" src="productImages/kebabs.jpg" alt="Card image" >
                 <div class="cardText">
