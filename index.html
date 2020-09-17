@@ -7,45 +7,70 @@
 
 <head>
     <title>Delish Kebabs Fish n Chips - Delicious Kebab - Delicious Fish </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="style/commonStyles.css" rel="stylesheet" />
-    <style>
-        body {
-            height: 100vh;
-            width: 100%;
-            font-size: 20px;
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <script>
+        function addMenuClass() {
+            var bar = document.getElementById("menuBar");
+            var smi = document.getElementById("smallMenuIcon");
+            if (bar.className === "nav") {
+                bar.className += " showMenu";
+                smi.className = "fa fa-times";
+            } else {
+                bar.className = "nav";
+                smi.className = "fa fa-bars";
+            }
         }
+
+    </script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 24px;
+            color: white;
+            width:100%;
+            font-family: 'Quicksand', sans-serif;
+        }
+
         :root {
             --main-bg-color: rgb(196, 4, 4);
         }
 
-        header {
+        .header {
             background-color: var(--main-bg-color);
+            width: 100%;
+            max-height: 40px;
+            box-shadow: 0px 2px 2px var(--main-bg-color);
             display: flex;
-            height: 8%;
             align-items: center;
-        }
-        
-        
-        .nav {
-            text-align: right;
-            margin-right: 50px;
-            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
 
-        .nav li a {
-            text-decoration: none;
-            color: white;
+        .callOrder {
+            padding: 10px;
             font-size: 100%;
-            padding:5px;
+            margin-right: auto;
+            min-width: 220px; 
         }
 
-        .nav li a:hover {
-            color:var(--main-bg-color);
-            background-color: white;
-            border-radius: 5px; padding:5px;
+        .nav {
+            font-weight: bold;
+            margin-left: auto;
+            margin-right: 10px;
+            font-size: 70%;           
+        }
 
+        .nav ul {
+            word-spacing: 10px;
         }
 
         .nav li {
@@ -54,9 +79,118 @@
             letter-spacing: 1px;
         }
 
-        .nav ul {
-            word-spacing: 20px;
+        .nav li a {
+            text-decoration: none;
+            color: white;
+            padding: 0 5px 0 5px;
         }
+
+        .nav li a:hover {
+            color: var(--main-bg-color);
+            background-color: white;
+            border-radius: 5px;
+            padding: 0 5px 0 5px;
+            box-sizing: border-box;
+        }
+
+        
+
+        .section {
+            margin-top:40px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 99%; 
+            height:84% ;
+            justify-content: center;
+            visibility: visible;
+            align-items: flex-start;
+        }
+        .companyInfo{
+            box-shadow: 0px 4px 4px 0px var(--main-bg-color);
+            width: 300px;
+            height:300px;
+            margin: 10px;
+            text-align: center;
+            color:var(--main-bg-color);            
+        }
+        .companyInfo img{
+            width:100%;
+            height:200px;
+        }
+        
+        .card {
+            box-shadow: 0px 4px 4px 0px var(--main-bg-color);;
+            width: 300px;
+            text-align: center;
+            font-family: arial;
+        }
+        .callTiming{
+            color: var(--main-bg-color);
+            font-size: 80%;
+        }
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+        .footer {
+            background-color: var(--main-bg-color);
+            display: flex;
+            height: 8%; width: 100%;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .copyright {
+            font-size: 70%; color: white;
+        }        
+        .socialMedia {
+            color: white;
+            font-size: 150%;
+
+        }
+        .barMenu {
+            padding-right: 10px;
+            visibility: hidden;
+            text-align: right;
+            width: 30px;
+            font-size: 20px;
+            
+        }
+
+        
+
+        .nav.showMenu {
+            position: absolute;
+            top: 40px;
+            right: 0px;
+            width: 200px;
+            height: auto;
+            z-index: 9999;
+            background-color: var(--main-bg-color);
+            visibility: visible; border:1px solid white;
+            opacity: 0.7;
+        }
+
+        .nav.showMenu li {
+            display: block;
+            text-align: center;
+        } 
+        /* -----------------------------------------------------------------------------------------------        
 
         section {
             display:flex; width:100%;
@@ -74,14 +208,7 @@
             align-items: center; justify-content: space-around;
             flex-direction: row; height: 100%;
         }
-        .callOrder{
-            padding : 10px;
-            color:var(--main-bg-color);
-            font-size: 150%;
-            margin-top:10px;
-            text-align: center;
-            opacity: 1;
-        }
+        
         .myCard{
             width: 25%; height: 70%;
             background-color: white; box-sizing: border-box;
@@ -140,35 +267,42 @@
             color: white;
             font-size: 150%;
 
+        } */
+        @media (min-width: 1025px) {
+            
         }
-        @media (min-width: 1025px){
-            .myCard{width:22%;height:90%}
-            .cardText p{height: 120px;}
+
+        @media (max-width: 1024px) {
+            .nav {
+                visibility: visible;
+            }
+
+            .barMenu {
+                visibility: hidden;
+            }
+            
         }
-        @media (max-width: 1024px){
-            header{height: 16%;flex-direction: column;}
-            .logoText{width: 100%;}
-            .nav{width:100%;text-align: center;}
-            section{height: 68%;}
-            .myCard{height:85%;} 
-            .cardText p{height: 100px;}           
+
+        @media (max-width:768px) {
+            .nav {
+                visibility: hidden;
+            }
+
+            .barMenu {
+                visibility: visible;
+            }
         }
-        @media (max-width: 479px){
-            header{height: 8%;justify-content: space-around;position: sticky;}
-            .nav{display:inline;}
-            section{height: 68%;}
-            body{height: 100%;}
-            #myCardsSlider{flex-direction: column;margin:5px;}
-            .myCard{width:90%;margin:5px;}
+
+        @media (max-width: 479px) {
+            
         }
-        
     </style>
 </head>
 
 <body>
-    <!-- <form id="form1" runat="server"> -->
-    <header>
-        <div class="nav">
+    <div class="header">
+        <div class="callOrder"><i class="fa fa-phone" aria-hidden="true"></i> 0409-717-693</div>
+        <div id="menuBar" class="nav" >
             <ul>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">Services</a></li>
@@ -176,14 +310,65 @@
                 <li><a href="#">ContactUs</a></li>
                 <li><a href="#">Login</a></li>
             </ul>
-            <div>
-    </header>
-    <section>
+        </div>
+        <div class="barMenu" onclick="addMenuClass()"><i id="smallMenuIcon" class="fa fa-bars" aria-hidden="true"></i></div>
+    </div>
+    <div id="sectionContent" class="section">
+        <div class="companyInfo">
+            <div><img src="images/logo.png" alt="Company Logo" /></div>
+            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        </div>
+        <div class="companyInfo">
+            <div><img src="images/logo.png" alt="Company Logo" /></div>
+            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        </div>
+        <div class="companyInfo">
+            <div><img src="images/logo.png" alt="Company Logo" /></div>
+            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        </div>
+        <div class="companyInfo">
+            <div><img src="images/logo.png" alt="Company Logo" /></div>
+            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        </div>
+        <div class="companyInfo">
+            <div><img src="images/logo.png" alt="Company Logo" /></div>
+            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        </div>
+        <div class="companyInfo">
+            <div><img src="images/logo.png" alt="Company Logo" /></div>
+            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        </div>
+        <div class="companyInfo">
+            <div><img src="images/logo.png" alt="Company Logo" /></div>
+            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        </div>    
+        <div class="companyInfo">
+            <div><img src="images/logo.png" alt="Company Logo" /></div>
+            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        </div>
+        <div class="companyInfo">
+            <div><img src="images/logo.png" alt="Company Logo" /></div>
+            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        </div>
+    </div>
+    <div class="footer">
+        
+        <div style="word-spacing: 20px;">
+            <a href=""><i class="fa fa-facebook socialMedia"></i></a>
+            <a href=""><i class="fa fa-twitter socialMedia"></i></a>
+            <a href=""><i class="fa fa-instagram socialMedia"></i></a>
+            <a href=""><i class="fa fa-linkedin socialMedia"></i></a>
+        </div>
+        <div class="copyright"><i class="fa fa-copyright"></i> Copyrights reserved 2020-21.</div>
+    </div>
+        
+   
+            <!-- <form id="form1" runat="server"> -->
+
+            <!-- <section>
         <div id="myCardsSlider">
             <div class="col1">
-                <div class="logo"><img src="images/logo.png" alt="" /></div>
-                <div class="callOrder"><i class="fa fa-phone" aria-hidden="true"></i> 0409-717-693</div>
-                <div class="callOrder"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+                
             </div>
             
             <div class="myCard">
@@ -204,9 +389,9 @@
                     <a href="" >Order Now</a>
                 </div>
             </div>
-        </div>
-        
-        <!-- <div class="container">
+        </div> -->
+
+            <!-- <div class="container">
             <div class="card" style="width:300px">
                 <img class="card-img-top" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
                 <div class="card-body">
@@ -217,19 +402,11 @@
             </div>
             
         </div> -->
-    </section>
+            <!-- </section>
     <div class="fullCousine"><a href="">View Full Cousine <i class="fa fa-arrow-right"></i></a></div>
-    <footer>
-        <div class="copyright">(c) Copyrights reserved 2020-21.</div>
-        <div style="word-spacing: 20px;">
-            <a href=""><i class="fa fa-facebook socialMedia"></i></a>
-            <a href=""><i class="fa fa-twitter socialMedia"></i></a>
-            <a href=""><i class="fa fa-instagram socialMedia"></i></a>
-            <a href=""><i class="fa fa-linkedin socialMedia"></i></a>
-        </div>
-    </footer>
-    <!-- <div><img id="logoImg" src="images/logo.png" alt="Logo image" class="logo" /></div> -->
-    <!-- </form> -->
+     -->
+            <!-- <div><img id="logoImg" src="images/logo.png" alt="Logo image" class="logo" /></div> -->
+            <!-- </form> -->
 </body>
 
 </html>
