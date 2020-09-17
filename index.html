@@ -107,7 +107,7 @@
         }
         .companyInfo{
             box-shadow: 0px 4px 4px 0px var(--main-bg-color);
-            width: 300px;
+            width: 350px;
             height:300px;
             margin: 10px;
             text-align: center;
@@ -117,32 +117,52 @@
             width:100%;
             height:200px;
         }
-        
-        .card {
-            box-shadow: 0px 4px 4px 0px var(--main-bg-color);;
-            width: 300px;
-            text-align: center;
-            font-family: arial;
-        }
         .callTiming{
             color: var(--main-bg-color);
             font-size: 80%;
         }
-        .price {
+
+        .card {
+            box-shadow: 0px 4px 4px 0px var(--main-bg-color);
+            width: 350px;
+            height:300px;
+            margin: 10px;
+            text-align: center;
+            color:var(--main-bg-color);
+            
+        }
+        .card img{
+            width:100%;
+            height: 150px;
+        }
+        .offerName{
+            font-size: 90%;
+            color: var(--main-bg-color);
+        }
+        .offerDetail{
+            font-size: 60%;
+            padding: 5px;
+            height:90px;
+            overflow: hidden;            
+        }
+        .offerPrice {
             color: grey;
-            font-size: 22px;
+            font-size: 18px;
+            margin-left: auto;
         }
 
         .card button {
             border: none;
             outline: 0;
-            padding: 12px;
+            padding: 5px;
             color: white;
-            background-color: #000;
+            background-color: var(--main-bg-color);
             text-align: center;
             cursor: pointer;
-            width: 100%;
+            width: 40%;
             font-size: 18px;
+            border-radius: 15px;
+            
         }
 
         .card button:hover {
@@ -151,17 +171,23 @@
         .footer {
             background-color: var(--main-bg-color);
             display: flex;
-            height: 8%; width: 100%;
+            width: 100%;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-around;
         }
         .copyright {
             font-size: 70%; color: white;
+            width: 100%;margin-left: 5px;
         }        
         .socialMedia {
+            width: 100%;
+            margin-left: 5px;
+        }
+        .socialMedia a{
             color: white;
             font-size: 150%;
-
+            text-decoration: none;
         }
         .barMenu {
             padding-right: 10px;
@@ -171,9 +197,6 @@
             font-size: 20px;
             
         }
-
-        
-
         .nav.showMenu {
             position: absolute;
             top: 40px;
@@ -190,6 +213,12 @@
             display: block;
             text-align: center;
         } 
+
+        .address{
+            justify-content: center;
+            margin:5px;
+            width:100%;
+        }
         /* -----------------------------------------------------------------------------------------------        
 
         section {
@@ -318,46 +347,56 @@
             <div><img src="images/logo.png" alt="Company Logo" /></div>
             <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
         </div>
-        <div class="companyInfo">
-            <div><img src="images/logo.png" alt="Company Logo" /></div>
-            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        <div class="card">
+            <img src="productImages/nuggets.jpeg" alt="Offer Image" style="width:100%">
+            <div class="offerName">Kids Meal 1</div>
+            <div class="offerPrice">$8.00 <button>Order Now</button></div>
+            <div class="offerDetail">2 Nuggets, Chips & Juice</div>                       
         </div>
-        <div class="companyInfo">
-            <div><img src="images/logo.png" alt="Company Logo" /></div>
-            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        <div class="card">
+            <img src="productImages/hotdog.jpeg" alt="Offer Image" style="width:100%">
+            <div class="offerName">Kids Meal 2</div>
+            <div class="offerPrice">$8.00 <button>Order Now</button></div>
+            <div class="offerDetail">Battered Hotdog, 1 Potato Cake, Chips & Juice</div>                       
         </div>
-        <div class="companyInfo">
-            <div><img src="images/logo.png" alt="Company Logo" /></div>
-            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        <div class="card">
+            <img src="productImages/chicken kebab.jpeg" alt="Offer Image" style="width:100%">
+            <div class="offerName">Chicken Kebab</div>
+            <div class="offerPrice">$12.50 <button>Order Now</button></div>
+            <div class="offerDetail">Freshly sliced chicken, served with salad and handmade bread with sauce of your choice  </div>                       
         </div>
-        <div class="companyInfo">
-            <div><img src="images/logo.png" alt="Company Logo" /></div>
-            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
-        </div>
-        <div class="companyInfo">
-            <div><img src="images/logo.png" alt="Company Logo" /></div>
-            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
-        </div>
-        <div class="companyInfo">
-            <div><img src="images/logo.png" alt="Company Logo" /></div>
-            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        <div class="card">
+            <img src="images/logo.png" alt="Offer Image" style="width:100%">
+            <div class="offerName">Special (Fresh Cooked Daily)</div>
+            <div class="offerPrice">$15.00 <button>Order Now</button></div>
+            <div class="offerDetail">Butter Chicken with Rice </div>                       
         </div>    
-        <div class="companyInfo">
-            <div><img src="images/logo.png" alt="Company Logo" /></div>
-            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        <div class="card">
+            <img src="images/logo.png" alt="Offer Image" style="width:100%">
+            <div class="offerName">Meal 1</div>
+            <div class="offerPrice">$12.00 <button>Order Now</button></div>
+            <div class="offerDetail">1 Fish, 1 Potato Cake, Chips & 1 Can of soft drink</div>                       
         </div>
-        <div class="companyInfo">
-            <div><img src="images/logo.png" alt="Company Logo" /></div>
-            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        <div class="card">
+            <img src="images/logo.png" alt="Offer Image" style="width:100%">
+            <div class="offerName">Meal 2</div>
+            <div class="offerPrice">$22.00 <button>Order Now</button></div>
+            <div class="offerDetail">2 Fishes, 2 Potato Cakes, Chips & 2 Cans of soft drink</div>                       
         </div>
+        
     </div>
     <div class="footer">
-        
-        <div style="word-spacing: 20px;">
-            <a href=""><i class="fa fa-facebook socialMedia"></i></a>
-            <a href=""><i class="fa fa-twitter socialMedia"></i></a>
-            <a href=""><i class="fa fa-instagram socialMedia"></i></a>
-            <a href=""><i class="fa fa-linkedin socialMedia"></i></a>
+        <div class="Address">
+            <h2>Delish Kebabs and Fish n Chips</h2>
+            <h5>315 Glenelg Hwy</h5>
+            <h5>Delacombe Town Centre</h5>
+            <h5>3351 Smythes Creek, VIC, Australia</h5>
+        </div>
+        <div class="socialMedia">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
         </div>
         <div class="copyright"><i class="fa fa-copyright"></i> Copyrights reserved 2020-21.</div>
     </div>
