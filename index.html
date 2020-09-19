@@ -40,7 +40,7 @@
         }
 
         :root {
-            --main-bg-color: rgb(196, 4, 4);
+            --main-bg-color: #D92D29;
         }
 
         .header {
@@ -53,6 +53,12 @@
             position: fixed;
             top: 0;
             left: 0;
+            z-index: 100;
+        }
+
+        .callTiming{
+            color: var(--main-bg-color);
+            font-size: 80%;
         }
 
         .callOrder {
@@ -93,81 +99,69 @@
             box-sizing: border-box;
         }
 
+        .section0{
+            margin:50px auto 0px auto; border: 1px solid var(--main-bg-color);
+            width: 98%; 
+            height:350px ;
+            background-image: url('images/mainbanner.jpg');
+            background-size: cover;
+            opacity: 0.8;
+            box-shadow: 0px 4px 4px 0px var(--main-bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .info{
+            margin-left:10px;
+            opacity: 1;
+            color:black;    
+        }
+        .serviceDiv{
+            display: flex;
+        }
+        .buttonOp{
+            padding:5px;
+            border:1px solid var(--main-bg-color);
+            border-radius: 5px;
+            height:30px; width:90px;
+            font: 16px bolder;
+            background-color: white;
+            opacity: 0.9;
+        }
         
-
         .section {
-            margin-top:40px;
             display: flex;
             flex-wrap: wrap;
-            width: 99%; 
+            width: 98%; 
             height:84% ;
             justify-content: center;
             visibility: visible;
             align-items: flex-start;
         }
-        .companyInfo{
-            box-shadow: 0px 4px 4px 0px var(--main-bg-color);
-            width: 350px;
-            height:300px;
-            margin: 10px;
-            text-align: center;
-            color:var(--main-bg-color);            
-        }
-        .companyInfo img{
-            width:100%;
-            height:200px;
-        }
-        .callTiming{
-            color: var(--main-bg-color);
-            font-size: 80%;
-        }
 
         .card {
             box-shadow: 0px 4px 4px 0px var(--main-bg-color);
             width: 350px;
-            height:300px;
+            height:120px;
             margin: 10px;
-            text-align: center;
+            text-align: left;
             color:var(--main-bg-color);
-            
+            border: 1px solid var(--main-bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .card img{
-            width:100%;
-            height: 150px;
+            width:50%;
+            height: 110px;
+            margin:5px;
         }
-        .offerName{
+        .serviceName{
             font-size: 90%;
             color: var(--main-bg-color);
+            width:40%;
         }
-        .offerDetail{
-            font-size: 60%;
-            padding: 5px;
-            height:90px;
-            overflow: hidden;            
-        }
-        .offerPrice {
-            color: grey;
-            font-size: 18px;
-            margin-left: auto;
-        }
-
-        .card button {
-            border: none;
-            outline: 0;
-            padding: 5px;
-            color: white;
-            background-color: var(--main-bg-color);
-            text-align: center;
-            cursor: pointer;
-            width: 40%;
-            font-size: 18px;
-            border-radius: 15px;
-            
-        }
-
-        .card button:hover {
-            opacity: 0.7;
-        }
+        
         .footer {
             background-color: var(--main-bg-color);
             display: flex;
@@ -219,84 +213,7 @@
             margin:5px;
             width:100%;
         }
-        /* -----------------------------------------------------------------------------------------------        
-
-        section {
-            display:flex; width:100%;
-            align-items: center; height:76%;  flex-direction: column; 
-        }
-        .col1{
-            text-align:top; 
-        }
-        .logo img{
-            border-radius: 10px;
-            opacity:0.9;
-        }
-        #myCardsSlider{
-            display: flex; width: 100%; margin:10px;
-            align-items: center; justify-content: space-around;
-            flex-direction: row; height: 100%;
-        }
         
-        .myCard{
-            width: 25%; height: 70%;
-            background-color: white; box-sizing: border-box;
-            border-radius: 10px; border:1px solid var(--main-bg-color);
-            text-align: center;
-        }
-        .cardText{
-            padding: 10px;
-        }
-        .cardText h4{
-            margin:0;
-        }
-        .cardText p{
-            height: 10%;
-            margin-top:5px;
-            overflow: hidden;
-        }
-        .cardText a{
-            text-decoration: none;
-            background-color: var(--main-bg-color);
-            color:white; margin-top:5px;
-            padding-left: 10px; padding-right:10px ;
-            padding-top:5px;padding-bottom: 5px;
-            border-radius: 5px; min-width: 145px;
-        }
-        .cardImage{
-            height: 40%; 
-            border-radius: 10px; width: 90%; margin-top:5px;
-        }
-        .fullCousine{
-            width: 100%;
-            text-align: right;
-            height: 8%;
-        }
-        .fullCousine a{
-            text-decoration: none;
-            color:white;
-            background-color: var(--main-bg-color);
-            padding: 8px;
-            font-size: 100%;
-            border-radius: 10px;
-            margin-right:50px;
-            margin-top:5px;
-        }
-        footer {
-            background-color: var(--main-bg-color);
-            display: flex;
-            height: 8%;
-            align-items: center;
-            justify-content: space-around;
-        }
-        .copyright {
-            font-size: 70%; color: white;
-        }        
-        .socialMedia {
-            color: white;
-            font-size: 150%;
-
-        } */
         @media (min-width: 1025px) {
             
         }
@@ -323,8 +240,17 @@
         }
 
         @media (max-width: 479px) {
-            
+            .callOrder{
+                font-size: 80%;
+                min-width: 180px;
+                padding: 5px;
+            }
+            .section0{
+                width: 90%;
+                height:210px ;
+            }
         }
+        
     </style>
 </head>
 
@@ -342,47 +268,40 @@
         </div>
         <div class="barMenu" onclick="addMenuClass()"><i id="smallMenuIcon" class="fa fa-bars" aria-hidden="true"></i></div>
     </div>
+    <div class="section0">
+        <div class="info">
+           <h3>Real taste of food with</h3>
+           <h1>Delish</h1>
+           <h6>Kebabs and Burger n Chips</h6>
+           <h6>We offer</h6>
+           <div class="serviceDiv">
+                <div class="buttonOp"><i class="fa fa-truck" aria-hidden="true"></i> Delivery</div>
+                <div class="buttonOp"><i class="fa fa-home" aria-hidden="true"></i> Pickup</div>
+                <div class="buttonOp"><i class="fa fa-road" aria-hidden="true"></i> Dine-in</div>
+           </div>        
+        </div>
+    </div>
     <div id="sectionContent" class="section">
-        <div class="companyInfo">
-            <div><img src="images/logo.png" alt="Company Logo" /></div>
-            <div class="callTiming"><i class="fa fa-clock-o" aria-hidden="true"></i> Timings<br/>All Days <br/> 11.00 AM - 9.00 PM</div>
+        <div class="card">
+            <img src="productImages/burgers.jpeg" alt="Offer Image">
+            <div class="serviceName">Burgers <i class="fa fa-arrow-right" aria-hidden="true"></i></div>                               
         </div>
         <div class="card">
-            <img src="productImages/nuggets.jpeg" alt="Offer Image" style="width:100%">
-            <div class="offerName">Kids Meal 1</div>
-            <div class="offerPrice">$8.00 <button>Order Now</button></div>
-            <div class="offerDetail">2 Nuggets, Chips & Juice</div>                       
+            <img src="productImages/hotdog.jpg" alt="Offer Image">
+            <div class="serviceName">Hotdog <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                                   
         </div>
         <div class="card">
-            <img src="productImages/hotdog.jpeg" alt="Offer Image" style="width:100%">
-            <div class="offerName">Kids Meal 2</div>
-            <div class="offerPrice">$8.00 <button>Order Now</button></div>
-            <div class="offerDetail">Battered Hotdog, 1 Potato Cake, Chips & Juice</div>                       
+            <img src="productImages/kebabs.jpg" alt="Offer Image">
+            <div class="serviceName">Kebabs <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                                  
         </div>
         <div class="card">
-            <img src="productImages/chicken kebab.jpeg" alt="Offer Image" style="width:100%">
-            <div class="offerName">Chicken Kebab</div>
-            <div class="offerPrice">$12.50 <button>Order Now</button></div>
-            <div class="offerDetail">Freshly sliced chicken, served with salad and handmade bread with sauce of your choice  </div>                       
-        </div>
-        <div class="card">
-            <img src="images/logo.png" alt="Offer Image" style="width:100%">
-            <div class="offerName">Special (Fresh Cooked Daily)</div>
-            <div class="offerPrice">$15.00 <button>Order Now</button></div>
-            <div class="offerDetail">Butter Chicken with Rice </div>                       
+            <img src="productImages/fishes.jpg" alt="Offer Image">
+            <div class="serviceName">Fishes <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                      
         </div>    
-        <div class="card">
-            <img src="images/logo.png" alt="Offer Image" style="width:100%">
-            <div class="offerName">Meal 1</div>
-            <div class="offerPrice">$12.00 <button>Order Now</button></div>
-            <div class="offerDetail">1 Fish, 1 Potato Cake, Chips & 1 Can of soft drink</div>                       
-        </div>
-        <div class="card">
-            <img src="images/logo.png" alt="Offer Image" style="width:100%">
-            <div class="offerName">Meal 2</div>
-            <div class="offerPrice">$22.00 <button>Order Now</button></div>
-            <div class="offerDetail">2 Fishes, 2 Potato Cakes, Chips & 2 Cans of soft drink</div>                       
-        </div>
+        
         
     </div>
     <div class="footer">
@@ -396,7 +315,7 @@
             <a href=""><i class="fa fa-facebook"></i></a>
             <a href=""><i class="fa fa-twitter"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
-            <a href=""><i class="fa fa-linkedin"></i></a>
+            
         </div>
         <div class="copyright"><i class="fa fa-copyright"></i> Copyrights reserved 2020-21.</div>
     </div>
@@ -404,46 +323,7 @@
    
             <!-- <form id="form1" runat="server"> -->
 
-            <!-- <section>
-        <div id="myCardsSlider">
-            <div class="col1">
-                
-            </div>
             
-            <div class="myCard">
-                <img class="cardImage" src="productImages/kebabs.jpg" alt="Card image" >
-                <div class="cardText">
-                    <h4>Seekh Kebab</h4>
-                    <p>Original taste of bla bla bla $<span class="currency"></span></p>
-                    <span class="currency">Just Rs $5</span>
-                    <a href="">Order Now</a>
-                </div>
-            </div>
-            <div class="myCard">
-                <img class="cardImage" src="productImages/kebabs.jpg" alt="Card image" >
-                <div class="cardText">
-                    <h4>Seekh Kebab</h4>
-                    <p>Original taste of bla bla bla </p>
-                    <span class="currency">Just Rs $5</span>
-                    <a href="" >Order Now</a>
-                </div>
-            </div>
-        </div> -->
-
-            <!-- <div class="container">
-            <div class="card" style="width:300px">
-                <img class="card-img-top" src="productImages/kebabs.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Seekh Kebab</h4>
-                    <p class="card-text">Original taste of bla bla bla lba <span style='color:lightseagreen'>$5</span></p>
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                </div>
-            </div>
-            
-        </div> -->
-            <!-- </section>
-    <div class="fullCousine"><a href="">View Full Cousine <i class="fa fa-arrow-right"></i></a></div>
-     -->
             <!-- <div><img id="logoImg" src="images/logo.png" alt="Logo image" class="logo" /></div> -->
             <!-- </form> -->
 </body>
